@@ -7,7 +7,7 @@
                 <ul>
                     <a href="#">Home </a>
                     <a href="#">About </a>
-                    <a href="#">Contac |</a>
+                    <a href="#">Contact </a>
                 </ul>
             </nav>
         </header>
