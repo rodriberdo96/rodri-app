@@ -20,7 +20,7 @@ body, html {
 
 .hero-image {
   
-  background-image: linear-gradient(rgba(0, 0, 0, 0.662), rgba(0, 0, 0, 0.867)), url("./assets/imgworkshop1.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.662), rgba(0, 0, 0, 0.867)), url("C:\Users\USER\OneDrive\Documentos\coder full stack\React\rodri-app\public\assets\imgworkshop1.png");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -52,3 +52,7 @@ body, html {
     transition: 0.2s;
     color: #0a0909 !important;
     background-color: rgba(225, 105, 0, 0.295) !important; }
+
+.cart-widget{
+  color: white!important;
+}

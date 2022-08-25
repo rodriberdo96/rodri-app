@@ -1,0 +1,27 @@
+
+.navbar {
+    border-bottom: 0.01rem solid !important;
+    border-bottom-color: #7c7777 !important; }
+  
+  .navbar {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important; }
+.nav-links{
+    display: inline-block;
+    height: 20px;
+    background-color:white;/*will change background-color of element */
+    color:white;
+    .nav-links:hover {
+    color: rgba(234, 65, 4, 0.842) !important; }
+}
+
+  .logo {
+    padding-left: 15px;
+    height: 88px;
+    width: 100px; }
+  
+  body, html {
+    height: 100%; }
+  
+  
+ 
