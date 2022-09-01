@@ -1,16 +1,16 @@
-export const Producto = [ {
+export const stock = [ {
     id: 1,
     nombre: "Laptop",
     precio: 80000,
     stock: 15,
-    img: '/public/assets/fotolaptop.jpg',
+    img: 'https://imgur.com/010fc2c2-e1c6-4fc3-bdb7-a5888f43cbbb',
 },
 {
     id: 2,
     nombre: "Mouse",
     precio: 5000,
     stock: 16,
-    img: "/public/assets/mousefoto.jpg",
+    img: "../public/assets/mousefoto.jpg",
 },
 {
     id: 3,

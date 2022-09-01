@@ -6,9 +6,9 @@ import {CartWidget} from '../CartWidget';
 export function NavBar() {
   return (
     <>
-      <Navbar bg="trans" variant="dark" classname="navbar">
+      <Navbar className='header' >
         <Container>
-          <Navbar.Brand href="#home">The Workshop Factory</Navbar.Brand>
+          <Navbar.Brand href="#home"> <h1 className='titulo'>enter<em className="fix">fix</em></h1></Navbar.Brand>
           <Nav className="me-auto" align="end">
             <Nav.Link classname="nav-links" href="#home">Home</Nav.Link>
             <Nav.Link classname="nav-links" href="#about us">About us</Nav.Link>
