@@ -1,0 +1,18 @@
+.boton-carrito{
+    border: none;
+    color: red;
+    font-size: 40px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+    .cart-icon:hover {
+        cursor: pointer;
+        color: white;
+        background-color:black
+    }
+    .cart-icon:focus {
+        outline: none;
+    }
+}
+

@@ -3,7 +3,7 @@ export const stock = [ {
     nombre: "Laptop",
     precio: 80000,
     stock: 15,
-    img: 'https://imgur.com/010fc2c2-e1c6-4fc3-bdb7-a5888f43cbbb',
+    img: 'https://imgur.com/ntZlm9P',
 },
 {
     id: 2,
