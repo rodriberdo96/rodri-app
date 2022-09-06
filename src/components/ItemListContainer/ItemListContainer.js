@@ -3,7 +3,7 @@ import './ItemListContainer.scss';
 import {Contador} from "../ItemCount";
 import ItemList from "../ItemList/ItemList";
 import {useEffect, useState} from "react";
-import { pedirDatos } from "../../helpers/pedirdatos";
+import { pedirDatos } from "../../helpers/pedirDatos";
 
 
 export const ItemListContainer = ({greeting}) => {
