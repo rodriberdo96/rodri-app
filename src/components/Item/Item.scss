@@ -20,8 +20,15 @@
     color: white;
     font-size: 18px;
     font-weight: 700;
-    padding: 5px;
+    padding: 9px;
     border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition: all 0.3s ease;
+    text-decoration: none;
     .boton-agregar:hover {
         cursor: pointer;
     }

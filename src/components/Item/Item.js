@@ -1,8 +1,9 @@
-import Producto from "../../data/data";
+
 import Contador from "../ItemCount";
 import { BsCart } from "react-icons/bs";
 import  "./Item.scss";
 import bootstrap from "bootstrap";
+import { Link } from "react-router-dom";
 const Item = ({producto}) => {
     return (
         <div id="contenedor-productos">
@@ -11,7 +12,7 @@ const Item = ({producto}) => {
                 <h1>{producto.nombre}</h1>
                 <h2>Precio:{producto.precio}</h2>
                 <h3> Stock Disponible:{producto.stock}</h3>
-                <button className="boton-agregar" > Agregar <BsCart/></button>
+                <Link to={ `/item/${producto.id}`} className="boton-agregar" > Ver más</Link>
             </div>
         </div>
     )

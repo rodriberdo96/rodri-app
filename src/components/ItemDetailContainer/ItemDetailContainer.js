@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-import {pedirDatos} from "../../helpers/pedirDatos"
+import {pedirDatos} from "../../helpers/pedirdatos"
 import {useParams} from "react-router-dom"
 import ItemDetail from "../ItemDetail/ItemDetail"
 
@@ -18,7 +18,7 @@ const ItemDetailContainer = (idProducto) => {
 
         pedirDatos()
             .then((res) => {
-                setItem(res.find (  item => item.id === idProducto.idProducto))
+                setItem(res.find ( (prod) => prod.id === Number(itemid)))
             })
             .catch((err) => {console.log(err)
             })
@@ -29,7 +29,7 @@ const ItemDetailContainer = (idProducto) => {
     
     return (
         <div>
-            {item && <ItemDetail item={item}/>}
+            {loading ? <h2>Cargando...</h2> : <ItemDetail item={item}/>}
         </div>
     )
 }
