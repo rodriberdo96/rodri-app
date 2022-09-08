@@ -150,5 +150,6 @@ export const stock = [ {
     img: "/assets/iphone2.jpg",
     category: 'celular',
 },
+
 ];
 
