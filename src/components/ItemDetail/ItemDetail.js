@@ -30,7 +30,7 @@ const ItemDetail = ({item}) => {
             <p> Precio: {item.precio}</p>
             <p> Stock: {item.stock}</p>
             <p> Categoria: {item.category}</p>
-            <Select options={item.options} />
+            <p> Memoria RAM: <Select options={item.options}/> </p>
             <Contador max={item.stock}  contador={cantidad} setContador={setCantidad} handleAgregar={handleAgregar} />
             <hr/>
             <p> <h2>Descripción:</h2> {item.descripcion}</p>
