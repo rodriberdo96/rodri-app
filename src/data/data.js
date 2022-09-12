@@ -1,15 +1,21 @@
 export const stock = [ {
     id: 1,
     nombre: "Dell Inspiron 15 3000",
+    descripcion: "Procesador Intel® Core™ i3-1005G1 (4M Cache, hasta 3.4 GHz)Pantalla táctil Full HD de 15,6 para un control manual La navegación táctil natural aprovecha al máximo Windows 11. La resolución de 1920 x 1080 cuenta con un color y una claridad impresionantes con pantalla de ángulos de visión amplios. Retroiluminación LED de bajo consumo. Procesador Intel Core™ i3 de 11.ª generación. Rendimiento de procesamiento inteligente de doble núcleo y cuatro vías para computación de calidad HD. Gráficos Intel UHD. Los gráficos en el procesador con memoria de video compartida brindan una calidad de imagen cotidiana para el uso de Internet, la edición básica de fotografías y los juegos casuales. Pesa 3.9 libras. y mide 0.8 de espesor. Ultrafino y ultraligero para máxima portabilidad, presenta un tamaño de pantalla más pequeño y omite la unidad de DVD/CD para lograr el factor de forma compacto. La salida HDMI amplía sus opciones de visualización. Conéctese a un HDTV o monitor de alta definición para configurar dos pantallas una al lado de la otra o simplemente ver más de la imagen general. Lector de medios integrado para una transferencia de fotos sencilla. Admite formatos de tarjeta de memoria SD, SDHC y SDXC. Conectividad inalámbrica/por cable (WiFi 5 - 802.11 ac) Conéctese a un enrutador Wireless-AC para obtener casi el triple de velocidad, más capacidad y una cobertura más amplia que Wireless-N. Compatible con versiones anteriores de todas las demás redes Wi-Fi y puntos de acceso. Cámara web HD integrada con micrófonoFacilita el chat de video con familiares y amigos o la teleconferencia con colegas a través de Skype u otras aplicaciones populares.",
     precio: 80000,
     stock: 15,
     img: '/assets/fotolaptop.jpg',
     category: 'laptop',
+    options: [
+        { value: 1, label: '8GB' },
+        { value: 2, label: '12GB' },
+        { value: 3, label: '16GB' },
+    ]
 },
 {
     id: 2,
     nombre: "Mouse Razer Deathadder",
-    precio: 5000,
+    descripcion: "Desde 2005 Razer es la marca líder de estilo de vida para jugadores. Ha diseñado y construido el ecosistema de hardware, software y servicios más grande del mundo. La ubicación de cada botón y curva de los mouses Razer se crearon para adaptarse perfectamente a tu mano. Gracias a estos dispositivos, conseguirás una experiencia de juego cómoda y placentera. Adaptado a tus movimientos. El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla. La funcionalidad al alcance de tu mano. El sistema de detección de movimiento óptico te permitirá mover el cursor de una manera más precisa y sensible que en los sistemas tradicionales. Rapidez y confiabilidad de los botones. Con sus 5 botones podrás tener mayor control e independencia para ejecutar. Apto para fácil traslado. Navegá rápidamente por documentos y páginas web gracias su diseño ultra delgado, ergonómico, liviano y conveniente para llevar a donde quieras o viajar",precio: 5000,
     stock: 16,
     img: "/assets/mousefoto.jpg",
     category: 'mouse',
@@ -17,6 +23,7 @@ export const stock = [ {
 {
     id: 3,
     nombre: "Teclado Razer Blackwidow",
+    
     precio: 10000,
     stock: 15,
     img: "/assets/tecladofoto.jpg",
@@ -25,6 +32,7 @@ export const stock = [ {
 {
     id: 4,
     nombre: "Monitor Lg 24",
+    
     precio: 22000,
     stock: 12,
     img: "/assets/fotomonitor.jpg",
@@ -33,6 +41,7 @@ export const stock = [ {
 {
     id: 5,
     nombre: "Impresora Epson L355",
+    
     precio: 32000,
     stock: 5,
     img: "/assets/fotoimpresora.jpg",
@@ -40,11 +49,16 @@ export const stock = [ {
 },
 {
     id: 6,
-    nombre: "Iphone 13 128gb",
+    nombre: "Iphone 13 ",
     precio:217000 ,
     stock: 10,
     img: "/assets/iphone.jpg",
     category: 'celular',
+    options: [
+        { value: 1, label: '128GB' },
+        { value: 2, label: '256GB' },
+        { value: 3, label: '512GB' },
+    ]
 },
 {
     id: 7,
@@ -53,14 +67,24 @@ export const stock = [ {
     stock: 10,
     img: "/assets/tablet.jpg",
     category: 'tablet',
+    options: [
+        { value: 1, label: '32GB' },
+        { value: 2, label: '64GB' },
+        { value: 3, label: '128GB' },
+    ]
 },
 {
     id: 8,
-    nombre: "Memoria RAM 8gb DDR4 2666mhz HyperX Fury", 
+    nombre: "Memoria RAM DDR4 2666mhz HyperX Fury", 
     precio:20000 ,
     stock: 15,
     img: "/assets/ram.jpg",
     category: 'ram',
+    options : [
+        { value: 1, label: '8GB' },
+        { value: 2, label: '16GB' },
+        { value: 3, label: '32GB' },
+    ]
 },
 {
     id: 9,
@@ -109,6 +133,11 @@ export const stock = [ {
     stock: 10,
     img: "/assets/laptop2.jpg",
     category: 'laptop',
+    options: [
+        { value: 1, label: '8GB' },
+        { value: 2, label: '12GB' },
+        { value: 3, label: '16GB' },
+    ]
 },
 {
     id: 15,
@@ -144,12 +173,16 @@ export const stock = [ {
 },
 {
     id: 19,
-    nombre: "Iphone 12 128gb",
+    nombre: "Iphone 12 ",
     precio: 200000,
     stock: 10,
     img: "/assets/iphone2.jpg",
     category: 'celular',
+    options: [
+        { value: 1, label: '64GB' },
+        { value: 2, label: '128GB' },
+        { value: 3, label: '256GB' },
+    ]
 },
-
 ];
 

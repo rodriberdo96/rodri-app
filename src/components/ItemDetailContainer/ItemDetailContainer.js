@@ -7,9 +7,9 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    const {itemid} = useParams()
+    const {itemId} = useParams()
 
-    console.log(itemid)
+    console.log(itemId)
     console.log(item)
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
 
         pedirDatos()
             .then((res) => {
-                setItem(res.find ( (prod) => prod.id === Number(itemid)))
+                setItem(res.find ( (prod) => prod.id === Number(itemId)))
             })
             .catch((err) => {console.log(err)
             })
