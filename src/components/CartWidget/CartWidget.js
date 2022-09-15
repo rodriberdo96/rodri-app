@@ -1,13 +1,22 @@
 import { BsFillCartFill} from "react-icons/bs";
-import Item from "../Item/Item";
 import "./CartWidget.scss";
-export const CartWidget= (contador) =>{
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
+
+const CartWidget= () =>{
+
+    const {cartQuantity,cart} = useContext(CartContext);
     return(
-        <div className="boton-carrito">
+        <Link to="./Cart/cart" className="cart">
+        
             <BsFillCartFill className="cart-icon" size={32} color="red"    onMouseOver={({target})=>target.style.color="white"}
     onMouseOut={({target})=>target.style.color="red"}/>
-            <span className="cart-count">0</span>
-        </div>
+            {cart.length=== 0?"":<span className="cart-count">{cartQuantity()}</span>}
+        
+        </Link>
     )
 
 }
+
+export default CartWidget;

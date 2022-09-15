@@ -5,7 +5,7 @@ import DropdownContext from 'react-bootstrap/esm/DropdownContext';
 function Category() {
     return (
         <Dropdown>
-            <Dropdown.Toggle variant="transparent" id="nav-dropdown-dark-example"  title="Dropdown">Categorías</Dropdown.Toggle>
+            <Dropdown.Toggle variant='outline-transparent'    title="Dropdown" >Productos</Dropdown.Toggle>
             <Dropdown.Menu>
                 <Dropdown.Item><Link to='/productos/laptop' className='catlink'>Laptop</Link></Dropdown.Item>
                 <Dropdown.Item > <Link to='/productos/mouse' className='catlink'> Mouse </Link></Dropdown.Item>

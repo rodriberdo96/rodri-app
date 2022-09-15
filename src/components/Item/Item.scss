@@ -1,9 +1,13 @@
 #contenedor-productos {
-    max-width: 1200px;
-    margin: 60px auto;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
 }
 
 .producto {
@@ -12,28 +16,66 @@
     margin: 10px;
     margin-bottom: 20px;
     box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+    transition: all .4s ease-out;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    &:hover {
+        transform: scale(1.05);
+    }
+
 }
-
-
 .boton-agregar {
     background-color: red;
     color: white;
     font-size: 18px;
     font-weight: 700;
     padding: 9px;
-    border: none;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     margin: 4px 2px;
     transition: all 0.3s ease;
     text-decoration: none;
     .boton-agregar:hover {
         cursor: pointer;
+        background-color: #b5bfee;
     }
     .boton-agregar:focus {
         outline: none;
+    }
+}
+
+.info-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 10px;
     }
 }
 

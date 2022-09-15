@@ -7,7 +7,7 @@ import { pedirDatos } from "../../helpers/pedirdatos";
 import { useParams } from "react-router-dom";
 
 
-export const ItemListContainer = () => {
+const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -31,9 +31,15 @@ export const ItemListContainer = () => {
             .finally(() => { setLoading(false); });
     }, [categoryid]);
     return(
-        <div >
-            {loading ? <h2>Cargando...</h2> : <ItemList productos={productos} />}
+        <div>
+            {loading ?(
+            <div className="loader-container">
+                <div className="spinner"></div>
+            </div>) 
+            : <ItemList productos={productos} />}
         </div>
     );
     }
 
+
+export default ItemListContainer;
