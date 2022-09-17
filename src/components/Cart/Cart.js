@@ -1,37 +1,46 @@
 import { useCartContext } from "../../context/CartContext";
-
+import { Link, Navigate } from "react-router-dom"
 
 const Cart = () => {
+const { cart, cartTotal, emptyCart, removeItem } = useCartContext()
 
-    const {cart, removeItem, cartTotal, emptyCart} = useCartContext;
-    
 
-    return(
-        <div className="container">
-            <h2>Carrito</h2>
-            {cart.length === 0 ? <h3>No hay productos en el carrito</h3> :
-            <div>
-                <button onClick={emptyCart}>Vaciar carrito</button>
-                <ul>
-                    {cart.map((item) => (
-                        <li key={item.id}>
-                            <div className="cart-item">
-                                <img src={item.img} alt={item.nombre} />
-                                <div className="cart-item-info">
-                                    <h3>{item.nombre}</h3>
-                                    <p>{item.precio}</p>
-                                    <p>{item.cantidad}</p>
-                                    <button onClick={() => removeItem(item.id)}>Eliminar</button>
-                                </div>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-                <h3>Total: ${cartTotal()}</h3>
-            </div>
-            }
+
+if (cart.length === 0) {
+    return ( 
+        <div className="container my-5">
+            <h2>Tu carrito está vacío</h2>
+            <hr/>
+            <Link to="/" className="btn btn-primary">Ir a comprar</Link>
         </div>
     )
+    }
+    return (
+        <div className="container my-5">
+            <h2>Carrito de compras</h2>
+            <hr/>
+            { cart.map((item) => (
+                <div className="row my-3" key={item.id}>
+                    <div className="col-12 col-md-6">
+                        <img src={item.img} alt={item.nombre} className="img-fluid"/>
+                    </div>
+                    <div className="col-12 col-md-6">
+                        <h3>{item.nombre}</h3>
+                        <p>Memoria: {item.memoria}</p>
+                        <p>Cantidad: {item.cantidad}</p>
+                        <p>Precio: ${item.precio}</p>
+                        <p>Total: ${item.precio * item.cantidad}</p>
+                        <button className="btn btn-danger" onClick={() => removeItem(item.id)}>Eliminar</button>
+                    </div>
+                </div>
+            ))}
+            <hr/>
+            <h3>Total: ${cartTotal()}</h3>
+            <button className="btn btn-danger" onClick={emptyCart}>Vaciar carrito</button>
+            <hr/>
+            <Link to="/" className="btn btn-primary">Seguir comprando</Link>
+        </div>
+    )       
 }
 
 export default Cart

@@ -24,27 +24,43 @@ const usuarios = [
 export const LoginProvider = ({children}) => {
     
         const [user, setUser] = useState({
-            user:"",
-            loggedIn: false,
+            user:"rodrigonzales@gmail.com",
+            loggedIn: true,
+            error:""
         });
     
         const login = (values) => {
-            const match = usuarios.find( user=> user.email === values.email);
-            if(match && match.password === values.password){
+            const match = usuarios.find(user => user.email === values.email)
+    
+            if (match) {
+                if (match.password === values.pass) {
+                    setUser({
+                        user: match.email,
+                        logged: true,
+                        error: ''
+                    })
+                } else {
+                    setUser({
+                        user: '',
+                        logged: false,
+                        error: "Password incorrecto"
+                    })
+                }
+            } else {
                 setUser({
-                    user: match.email,
-                    loggedIn: true,
-                });
-            }else{
-                alert("Usuario o contraseña incorrectos");
+                    user: '',
+                    logged: false,
+                    error: "Email incorrecto"
+                })
             }
-        };
+        }
         const logout = () => {
             setUser({
                 user: "",
                 loggedIn: false,
             });
         };
+        
         return(
             <LoginContext.Provider value={{
                 user,

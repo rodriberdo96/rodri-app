@@ -34,7 +34,7 @@ const ItemDetail = ({item}) => {
             <p> Precio: {item.precio}</p>
             <p> Stock: {item.stock}</p>
             <p> Categoria: {item.category}</p>
-            <p> Memoria RAM: <Select options={item.options} onSelect={setMemoria}/> </p>
+            {item.options?<p> Memoria RAM: <Select options={item.options} onSelect={setMemoria}/> </p>:null}
             <hr/>
             {
                 isInCart(item.id)
