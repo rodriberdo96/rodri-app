@@ -8,35 +8,10 @@ const Contador = ({max,contador,setContador, handleAgregar}) => {
     }
 
     const handleRestar = () => {
-        if (contador > 1 ) {
+        if (contador > 0)  {
             setContador(contador -1)
         }
     }
-
-    useEffect(() => {
-        if (contador > 0) {
-            console.log("se agrego al carrito")
-        }
-    }, [contador])
-    useEffect(() => {
-        if (contador === 0) {
-            console.log("se elimino del carrito")
-        }
-    }, [contador])
-
-    useEffect(() => {
-        if (contador=== max) {
-            console.log("se alcanzo el limite")
-            setContador(false)
-            return () => {
-                setContador(0)
-                alert("se alcanzo el limite")
-            }
-        }
-    }, [contador])
-
-    
-
 
     return (
         <div>
