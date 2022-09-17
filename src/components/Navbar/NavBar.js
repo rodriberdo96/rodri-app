@@ -26,7 +26,7 @@ const NavBar= () => {
         <CartWidget />
       </Navbar>
       <div className="header_user">
-        <small className="header_user_name">Bienvenido: {user.nombre}</small>
+        <small className="header_user_name">Bienvenido: {user.email}</small>
         <button className="header_user_logout" onClick={logout}>Cerrar sesión</button>
       </div>
     </>

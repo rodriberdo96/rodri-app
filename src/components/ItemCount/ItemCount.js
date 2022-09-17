@@ -1,13 +1,13 @@
 import { useState,useEffect } from "react";
 
 const Contador = ({max,contador,setContador, handleAgregar}) => {
-    const handlesumar = () => {
+    const handleSumar = () => {
         if (contador < max) {
             setContador(contador +1)
         }
     }
 
-    const handlerestar = () => {
+    const handleRestar = () => {
         if (contador > 1 ) {
             setContador(contador -1)
         }
@@ -39,12 +39,26 @@ const Contador = ({max,contador,setContador, handleAgregar}) => {
 
 
     return (
-        < div className="container my-5">
-            <button onClick={handlerestar} className="btn btn-outline-primary">-</button>
-            <span className="mx-2 stock">{contador}</span>
-            <button onClick={handlesumar} className="btn btn-outline-primary">+</button>
+        <div>
+            <button 
+                className={`btn mx-2 ${contador === 0 ? "btn-outline-danger" : "btn-outline-primary"} ${contador === 0 ? 'counter-disabled' :''}`}
+                onClick={handleRestar}
+            >
+            -
+            </button>
+
+            <span className="mx-3">{contador}</span>
+            <button 
+                className={contador === max ? "btn btn-danger" : "btn btn-primary"}
+                onClick={handleSumar}
+                disabled={contador === max}
+            >
+            +
+            </button>
             <br/>
-            <button onClick={handleAgregar} className="btn btn-success my-2">Agregar al carrito</button>
+            <button disabled={contador === 0} onClick={handleAgregar} className="btn btn-success my-2">
+            Agregar al carrito
+            </button>
         </div>
     )
 }

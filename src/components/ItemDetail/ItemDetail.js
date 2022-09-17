@@ -1,6 +1,4 @@
-import Item from "../Item/Item";
-import {useParams} from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Contador from "../ItemCount/ItemCount";
 import Select from "../Select/Select";
 import "./ItemDetail.scss"
@@ -14,7 +12,7 @@ const ItemDetail = ({item}) => {
     console.log(cart);
 
     const [cantidad , setCantidad] = useState(1);
-    const [memoria, setMemoria] = useState(item.options[0].value);
+    const [memoria, setMemoria] = useState(0);
 
     const handleAgregar = () => {
         const itemAgregado = {
@@ -36,17 +34,16 @@ const ItemDetail = ({item}) => {
             <p> Precio: {item.precio}</p>
             <p> Stock: {item.stock}</p>
             <p> Categoria: {item.category}</p>
-            <p> Memoria RAM: <Select options={item.options}/> </p>
-            <Contador max={item.stock}  contador={cantidad} setContador={setCantidad} handleAgregar={handleAgregar} />
+            <p> Memoria RAM: <Select options={item.options} onSelect={setMemoria}/> </p>
             <hr/>
             {
                 isInCart(item.id)
                 ?   <Link to="/cart" className="btn btn-success my-2">Terminar mi compra</Link>
                 :   <Contador 
                         max={item.stock}
-                        counter={cantidad}
-                        setCounter={setCantidad}
-                        handleAgregar={handleAgregar}
+                        contador={cantidad}
+                        setContador={setCantidad}
+                        handleagregar={handleAgregar}
                     />
             }
             <hr/>

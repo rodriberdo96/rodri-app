@@ -16,6 +16,7 @@ const PrivateRoutes = () => {
             <Route path="/Nosotros" element={ <Nosotros/> }/>
             <Route path="/Servicios" element={ <Servicios/> }/>
             <Route path="/Contacto" element={ <Contacto/> }/>
+            <Route path="/Cart" element={ <Cart/> }/>
             <Route path='/productos/:categoryid' element={<ItemListContainer/>} />
             <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
             <Route path='*' element={ <Navigate to="/"/>} />
