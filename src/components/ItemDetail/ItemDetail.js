@@ -19,6 +19,7 @@ const ItemDetail = ({item}) => {
             id: item.id,
             nombre: item.nombre,
             precio: item.precio,
+            img: item.img,
             cantidad,
             memoria,
         }
