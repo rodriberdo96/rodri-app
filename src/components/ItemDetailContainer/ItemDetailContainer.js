@@ -2,7 +2,7 @@ import {useEffect, useState} from "react"
 import {pedirDatos} from "../../helpers/pedirdatos"
 import {useParams} from "react-router-dom"
 import ItemDetail from "../ItemDetail/ItemDetail"
-
+import "./ItemDetailContainer.scss"
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -10,7 +10,6 @@ const ItemDetailContainer = () => {
     const {itemId} = useParams()
 
     console.log(itemId)
-    console.log(item)
 
     useEffect(() => {
 
@@ -29,7 +28,10 @@ const ItemDetailContainer = () => {
     
     return (
         <div>
-            {loading ? <h2>Cargando...</h2> : <ItemDetail item={item}/>}
+            {loading ? (
+            <div className="loader-container">
+                <div className="spinner"></div>
+            </div>)  : <ItemDetail item={item}/>}
         </div>
     )
 }

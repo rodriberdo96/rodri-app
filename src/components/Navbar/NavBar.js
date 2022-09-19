@@ -14,7 +14,7 @@ const NavBar= () => {
     <>
       <Navbar className='header' >
         <Container>
-          <Navbar.Brand href="#home" > <Link to="/" className='titulo'> <h1 className='titulo'>enter<em className="fix">fix</em></h1></Link></Navbar.Brand>
+          <Navbar.Brand href="/" className='titulo' ><h1 className='titulo'>enter<em className="fix">fix</em></h1></Navbar.Brand>
           <Nav className="me-auto" align="end">
             <Link to="/" className="links"> Home </Link>
             <Category className= "links"/>

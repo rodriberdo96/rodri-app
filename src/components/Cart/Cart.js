@@ -39,7 +39,10 @@ if (cart.length === 0) {
             <button className="btn btn-danger" onClick={emptyCart}>Vaciar carrito</button>
             <hr/>
             <Link to="/" className="btn btn-primary">Seguir comprando</Link>
+            <hr/>
+            <Link to="/checkout" className="btn btn-success">Finalizar compra</Link>
         </div>
+
     )       
 }
 

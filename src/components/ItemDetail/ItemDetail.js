@@ -15,15 +15,15 @@ const ItemDetail = ({item}) => {
     const [memoria, setMemoria] = useState(0);
 
     const handleAgregar = () => {
-        const itemAgregado = {
+        const itemToCart = {
             id: item.id,
             nombre: item.nombre,
             precio: item.precio,
             cantidad,
             memoria,
         }
-        console.log(itemAgregado)
-        addToCart(itemAgregado);
+        console.log(itemToCart)
+        addToCart(itemToCart);
     }
 
     return (
@@ -47,7 +47,7 @@ const ItemDetail = ({item}) => {
                     />
             }
             <hr/>
-            <p> <h2>Descripción:</h2> {item.descripcion}</p>
+            <h2>Descripción:</h2> <p>{item.descripcion}</p>
 
         </div>
     )
