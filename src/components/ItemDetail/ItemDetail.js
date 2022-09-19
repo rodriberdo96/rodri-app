@@ -12,7 +12,7 @@ const ItemDetail = ({item}) => {
     console.log(cart);
 
     const [cantidad , setCantidad] = useState(1);
-    const [memoria, setMemoria] = useState(0);
+    const [memoria, setMemoria] = useState(1);
 
     const handleAgregar = () => {
         const itemToCart = {
@@ -43,7 +43,7 @@ const ItemDetail = ({item}) => {
                         max={item.stock}
                         contador={cantidad}
                         setContador={setCantidad}
-                        handleagregar={handleAgregar}
+                        handleAgregar={handleAgregar}
                     />
             }
             <hr/>
