@@ -1,8 +1,4 @@
-
-import  Contador  from "../ItemCount/ItemCount";
-import { BsCart } from "react-icons/bs";
 import  "./Item.scss";
-import bootstrap from "bootstrap";
 import { Link } from "react-router-dom";
 const Item = ({producto}) => {
     return (

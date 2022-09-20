@@ -1,5 +1,3 @@
-import { useState,useEffect } from "react";
-
 const Contador = ({max,contador,setContador, handleAgregar}) => {
     const handleSumar = () => {
         if (contador < max) {

@@ -1,7 +1,7 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { CartProvider } from './context/CartContext';
-import { LoginProvider, useLoginContext } from './context/LoginContext';
+import { LoginProvider} from './context/LoginContext';
 import AppRouter from './router/AppRouter'
 
 

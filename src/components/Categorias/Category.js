@@ -1,5 +1,4 @@
     import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownContext from 'react-bootstrap/esm/DropdownContext';
     import {Link} from 'react-router-dom';
     import "./Categoria.scss"; 
 function Category() {
