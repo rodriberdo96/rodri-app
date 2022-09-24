@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react"
-import {pedirDatos} from "../../helpers/pedirdatos"
 import {useParams} from "react-router-dom"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import "./ItemDetailContainer.scss"
+import {doc, getDoc} from "firebase/firestore"
+import {db} from "../../FireBase/Config"
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -14,18 +15,13 @@ const ItemDetailContainer = () => {
     useEffect(() => {
 
         setLoading(true)    
-
-        pedirDatos()
-            .then((res) => {
-                setItem(res.find ( (prod) => prod.id === Number(itemId)))
+        const docRef = doc(db, "productos", itemId);
+        getDoc(docRef)
+            .then((resp) => {
+                setItem({id: resp.id, ...resp.data()})
             })
-            .catch((err) => {console.log(err)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-    },[])
-    
+            .finally(() => setLoading(false))
+    }, [])
     return (
         <div>
             {loading ? (

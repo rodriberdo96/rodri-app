@@ -1,3 +1,5 @@
+import Item from "../Item/Item"
+
 const Contador = ({max,contador,setContador, handleAgregar}) => {
     const handleSumar = () => {
         if (contador < max) {
