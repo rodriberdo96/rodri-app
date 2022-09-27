@@ -35,18 +35,28 @@ export const CartProvider = ({children}) => {
 
     const emptyCart = () => {
         Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Estás Seguro?',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Si,Borrar!'
         }).then((result) => {
             if (result.isConfirmed) {
                 setCart([])
             }
         })
+    }
+
+    const clear = (id) => {
+        Swal.fire({
+            title: "Tu compra ha sido realizada con éxito",
+            text: `Tu número de pedido es: ${id}`,
+            icon: 'success',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Genial!'
+        })
+        setCart([])
     }
 
     useEffect(() => {
@@ -61,7 +71,8 @@ export const CartProvider = ({children}) => {
             cartQuantity,
             cartTotal,
             emptyCart,
-            removeItem
+            removeItem,
+            clear
         }}>
             {children}
         </CartContext.Provider>

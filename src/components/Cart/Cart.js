@@ -40,7 +40,7 @@ if (cart.length === 0) {
             <hr/>
             <Link to="/" className="btn btn-primary">Seguir comprando</Link>
             <hr/>
-            <Link to="/checkout" className="btn btn-success">Finalizar compra</Link>
+            <Link to="/Checkout" className="btn btn-success">Finalizar compra</Link>
         </div>
 
     )       
