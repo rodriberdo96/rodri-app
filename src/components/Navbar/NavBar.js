@@ -5,22 +5,29 @@ import './NavBar.scss'
 import CartWidget from '../CartWidget/CartWidget';
 import {Link} from 'react-router-dom';
 import Category from '../Categorias/Category';
-import {useLoginContext} from '../../context/LoginContext';
+import {useAuth} from '../../context/AuthContext';
+import React from 'react';
 
 const NavBar= () => {
-  const {user, logout} = useLoginContext();
+  const {user, logout} = useAuth();
+  const handleMousesobre = (e) => {
+    e.target.style.color = 'grey';
+  }
+  const handleMousefuera = (e) => {
+    e.target.style.color = 'black';
+  }
   
   return (
     <>
       <Navbar className='header' >
-        <Container>
+        <Container >
           <Navbar.Brand href="/" className='titulo' ><h1 className='titulo'>enter<em className="fix">fix</em></h1></Navbar.Brand>
           <Nav className="me-auto" align="end">
-            <Link to="/" className="links"> Home </Link>
-            <Category className= "links"/>
-            <Link to='/nosotros' className="links"> Nosotros </Link>
-            <Link to='/servicios' className="links" > Servicios </Link>
-            <Link to='/contacto' className="links" > Contacto </Link>
+            <Link to="/" className="links" onMouseOver={handleMousesobre} onMouseOut={handleMousefuera}> Home </Link>
+            <Category className= "links"  onMouseOver={handleMousesobre} onMouseOut={handleMousefuera}/>
+            <Link to='/nosotros' className="links"  onMouseOver={handleMousesobre} onMouseOut={handleMousefuera}> Nosotros </Link>
+            <Link to='/servicios' className="links"  onMouseOver={handleMousesobre} onMouseOut={handleMousefuera} > Servicios </Link>
+            <Link to='/contacto' className="links"  onMouseOver={handleMousesobre} onMouseOut={handleMousefuera} > Contacto </Link>
           </Nav>
         </Container>
         <CartWidget />

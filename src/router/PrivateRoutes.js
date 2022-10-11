@@ -6,7 +6,8 @@ import Contacto from '../components/Contacto/Contacto';
 import Cart from '../components/Cart/Cart';
 import Servicios from '../components/Servicios/Servicios';
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Checkout from '../components/Checkout/Checkout' 
+import React from 'react'
+import Checkout from '../components/Checkout/Checkout';
 
 const PrivateRoutes = () => {
     return (

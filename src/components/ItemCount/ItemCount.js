@@ -1,4 +1,4 @@
-import Item from "../Item/Item"
+import React from 'react'
 
 const Contador = ({max,contador,setContador, handleAgregar}) => {
     const handleSumar = () => {

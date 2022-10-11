@@ -4,7 +4,7 @@ import Select from "../Select/Select";
 import "./ItemDetail.scss"
 import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
-
+import React from 'react'
 
 const ItemDetail = ({item}) => {
 

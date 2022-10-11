@@ -1,7 +1,7 @@
 
 import Container from 'react-bootstrap/esm/Container';
 import Item from '../Item/Item';
-
+import React from 'react'
 
 const ItemList = ( {productos = []} ) => {
 
@@ -9,7 +9,7 @@ const ItemList = ( {productos = []} ) => {
         <div className="container my-5">
             <h2>Productos</h2>
             <hr/>
-            <Container >
+            <Container>
             { productos.map((prod) => <Item producto={prod} key={prod.id}/>
             )}
             </Container>

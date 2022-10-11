@@ -1,11 +1,14 @@
-import LoginScreen from '../components/LoginScreen/LoginScreen'
+import Login from '../components/Login/Login'
 import { Routes, Route, Navigate } from 'react-router-dom'
-
+import React from 'react'
+import { useAuth } from '../context/AuthContext'
+import Register from '../components/Registro/Registro'
 const PublicRoutes = () => {
     return (
         <Routes>
-            <Route path='/' element={ <LoginScreen/> }/>
-            <Route path='*' element={ <Navigate to="/login"/>} />
+            <Route path='/' element={ <Login/> }/>
+            <Route path='*' element={ <Navigate to="/Login"/>} />
+            <Route path='/Registro' element={ <Register/> }/>
         </Routes>
     )
 }

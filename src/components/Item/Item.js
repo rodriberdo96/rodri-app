@@ -1,6 +1,14 @@
 import  "./Item.scss";
+import React from 'react'
 import { Link } from "react-router-dom";
+
 const Item = ({producto}) => {
+    const handleMouseOver = (e) => {
+        e.target.style.color = "black";
+    }
+    const handleMouseOut = (e) => {
+        e.target.style.color = "white";
+    }
     return (
         <div id="contenedor-productos">
             <div className="producto">
@@ -11,7 +19,7 @@ const Item = ({producto}) => {
                     <h3> Stock Disponible:{producto.stock}</h3>
                 </div>
                 <div className="boton">
-                    <Link to={ `/item/${producto.id}`} className="boton-agregar" >  Ver más</Link>
+                    <Link to={ `/item/${producto.id}`} className="boton-agregar" onMouseOver={ handleMouseOver} onMouseOut={ handleMouseOut}>  Ver más</Link>
                 </div>
             </div>
         </div>

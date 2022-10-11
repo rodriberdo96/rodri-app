@@ -4,6 +4,8 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import "./ItemDetailContainer.scss"
 import {doc, getDoc} from "firebase/firestore"
 import {db} from "../../FireBase/Config"
+import React from 'react'
+
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null)
     const [loading, setLoading] = useState(true)

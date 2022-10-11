@@ -1,17 +1,18 @@
 import './App.css';
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { CartProvider } from './context/CartContext';
-import { LoginProvider} from './context/LoginContext';
+import { AuthProvider} from './context/AuthContext';
 import AppRouter from './router/AppRouter'
 
 
 function App() {
   return (
-    <LoginProvider>
+    <AuthProvider>
       <CartProvider>
         <AppRouter />
       </CartProvider>
-    </LoginProvider>
+    </AuthProvider>
   );
 }
 
