@@ -27,7 +27,6 @@ if (cart.length === 0) {
                     </div>
                     <div className="col-12 col-md-6">
                         <h3>{item.nombre}</h3>
-                        <p>Memoria: {item.memoria}</p>
                         <p>Cantidad: {item.cantidad}</p>
                         <p>Precio: ${item.precio}</p>
                         <p>Total: ${item.precio * item.cantidad}</p>

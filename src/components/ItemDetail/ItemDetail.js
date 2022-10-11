@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Contador from "../ItemCount/ItemCount";
-import Select from "../Select/Select";
 import "./ItemDetail.scss"
 import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
@@ -12,7 +11,6 @@ const ItemDetail = ({item}) => {
     console.log(cart);
 
     const [cantidad , setCantidad] = useState(1);
-    const [memoria, setMemoria] = useState(1);
 
     const handleAgregar = () => {
         const itemToCart = {
@@ -21,7 +19,6 @@ const ItemDetail = ({item}) => {
             precio: item.precio,
             img: item.img,
             cantidad,
-            memoria,
         }
         console.log(itemToCart)
         addToCart(itemToCart);
@@ -35,7 +32,6 @@ const ItemDetail = ({item}) => {
             <p> Precio: {item.precio}</p>
             <p> Stock: {item.stock}</p>
             <p> Categoria: {item.category}</p>
-            {item.options?<p> Memoria RAM: <Select options={item.options} onSelect={setMemoria}/> </p>:null}
             <hr/>
             {
                 isInCart(item.id)

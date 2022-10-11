@@ -6,10 +6,10 @@ import {db} from '../../FireBase/Config'
 import React from 'react'
 import { useForm } from '../../hooks/useForm';
 
+
 const Checkout = () => {
     const {cart, cartTotal, clear} = useCartContext()
-    const [orderId, setOrderId] = useState(null)
-
+    const [  ,setOrderId] = useState(null)
     const {values, handleInputChange} = useForm({
         nombre: '',
         email: '',
@@ -65,7 +65,7 @@ const Checkout = () => {
                         .then((doc) => {
                             console.log(doc.id);
                             setOrderId(doc.id);
-                            clear();
+                            clear(doc.id);
                     })
                 })
         } else {
@@ -77,6 +77,8 @@ const Checkout = () => {
         return <Navigate to='/' />
     }
     }
+
+    
     return (
         <div className='container my-5'>
             <h1>Checkout</h1>

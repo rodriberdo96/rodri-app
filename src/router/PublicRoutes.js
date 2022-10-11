@@ -1,7 +1,6 @@
 import Login from '../components/Login/Login'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import React from 'react'
-import { useAuth } from '../context/AuthContext'
 import Register from '../components/Registro/Registro'
 const PublicRoutes = () => {
     return (
